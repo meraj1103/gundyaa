@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>For Shirin (Gundya) 💖</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@600;700&family=Lora:ital,wght@0,400;0,600;1,400&display=swap" rel="stylesheet">
+    <!-- Font Awesome for icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <div class="hearts-container" id="hearts-container"></div>
+
+    <main class="container">
+        <!-- Landing Section / Envelope -->
+        <section class="envelope-section" id="envelope-section">
+            <h1 class="glow-text">Hey Gundya... 💕</h1>
+            <p class="subtitle">I made something special for you.</p>
+            
+            <div class="envelope-wrapper" tabindex="0" aria-label="Click to open letter">
+                <div class="envelope" id="envelope">
+                    <div class="front"></div>
+                    <div class="top-flap"></div>
+                    <div class="letter">
+                        <p class="letter-preview">Open me...</p>
+                    </div>
+                </div>
+            </div>
+            <p class="instruction">Tap the envelope to open</p>
+        </section>
+
+        <!-- Main Content (Letter & Diary) - Hidden initially -->
+        <section class="main-content hidden" id="main-content">
+            
+            <!-- Navigation Tabs -->
+            <div class="tabs">
+                <button class="tab-btn active" data-target="letter-tab">Love Letter</button>
+                <button class="tab-btn" data-target="diary-tab">Our Diary</button>
+                <button class="tab-btn" data-target="gallery-tab">Memories</button>
+            </div>
+
+            <!-- Love Letter Content -->
+            <div class="tab-content active" id="letter-tab">
+                <div class="paper-container">
+                    <h2 class="handwritten">To My Bestie, Shirin 💌</h2>
+                    <div class="letter-body">
+                        <p>Dear Gundya,</p>
+                        <p>I wanted to make something unique just for you because you are so special to me. You know how much you love the concept of love letters, so I decided to build you a digital one that you can keep perfectly safe forever.</p>
+                        <p>You mean the world to me. Thank you for always being there, through all the laughs, the crazy moments, and everything in between.</p>
+                        <p>This space is just for us. You can read this whenever you want, write down your thoughts in the diary, and keep our pictures in the gallery.</p>
+                        <p>Love always,</p>
+                        <p class="signature">Your Bestie</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Diary Content -->
+            <div class="tab-content" id="diary-tab">
+                <div class="paper-container notebook">
+                    <div class="notebook-header">
+                        <h2 class="handwritten">Shirin's Secret Diary 📖</h2>
+                        <button id="edit-btn" class="icon-btn" title="Write in Diary">
+                            <i class="fas fa-pen"></i>
+                        </button>
+                    </div>
+                    
+                    <!-- View Mode -->
+                    <div id="diary-entries" class="diary-entries">
+                        <!-- Entries will be loaded here via JS -->
+                        <div class="entry empty-state">Your diary is empty. Click the pen to start writing!</div>
+                    </div>
+
+                    <!-- Edit Mode -->
+                    <div id="diary-editor" class="diary-editor hidden">
+                        <input type="text" id="entry-title" placeholder="A title for your entry (optional)..." class="diary-input heading">
+                        <textarea id="entry-content" placeholder="Dear Diary..." class="diary-input body-text"></textarea>
+                        <div class="editor-actions">
+                            <button id="cancel-btn" class="btn secondary">Cancel</button>
+                            <button id="save-btn" class="btn primary">Save Entry</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Photo Gallery Content -->
+            <div class="tab-content" id="gallery-tab">
+                <div class="paper-container">
+                    <h2 class="handwritten">Our Memories 📸</h2>
+                    <p class="gallery-desc">Upload photos here to save our beautiful moments.</p>
+                    
+                    <div class="upload-section">
+                        <label for="photo-upload" class="upload-btn">
+                            <i class="fas fa-cloud-upload-alt"></i> Choose a Photo
+                        </label>
+                        <input type="file" id="photo-upload" accept="image/*" class="hidden">
+                    </div>
+
+                    <div id="gallery-grid" class="gallery-grid">
+                        <!-- Photos will be loaded here -->
+                        <div class="empty-state">No photos yet. Upload your first memory above!</div>
+                    </div>
+                </div>
+            </div>
+
+        </section>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>
